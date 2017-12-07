@@ -1,59 +1,63 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { connect } from 'react-redux';
+import sendMsgToServer from './actions/sendMsgAction.js'
+import setMsgAction from './actions/setMsgAction.js'
+import clearMsgAction from './actions/clearMsgAction.js'
+import { bindActionCreators } from 'redux'
 
 import './App.css';
 
-class App extends Component {
-  constructor(){
-    super();
-    this.state ={
-      message:"",
-      conversation:[]
-    }
-  }
+
+const App =(props) => {
   
-  handleChange = (text) => {
-    this.setState({message:text})
-  }
-  
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-      axios({
-        method:'post',
-        url:'https://converse-app-jnoriega.c9users.io:8081',
-        data: {
-          word: this.state.message
-        }
-      })
-      .then((response) => {
-        let translation = response.data.translation;
-        this.setState({...this.state,message:"",conversation:[...this.state.conversation,translation]},
-        ()=>console.log('this is the new state',this.state))
-      }).catch(function(err){
-        console.log('this is the error', err);
-      })
+    
+    props.sendMsgToServerPassedToProps(props.msgStateInTheStorePassedToProps.message);
+    
+    props.clearMsgActionPassedToProps();
+    
   }
-  render() {
+  
     return (
       <div className="App">
         
         <header className="App-header">
           
-          <h1 className="App-title">Extrinsic</h1>
+          <h1 className="App-title">xtrinsic</h1>
           
         </header>
           <div>
-            {this.state.conversation.map((msg,idx) => <div className="translatedMsg" key={idx}>{msg}</div> )}
+            {console.log('this is the conversation in state', props.msgStateInTheStorePassedToProps.conversation)}
+            {props.msgStateInTheStorePassedToProps.conversation.map((msg,idx) => <div className="translatedMsg" key={idx}>{msg}</div> )}
           </div>
-          <form onSubmit={(event)=>this.handleSubmit(event)}>
-            <input type="text" name="word" value={this.state.message} onChange={(event) => this.handleChange(event.target.value)} />
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="word" value={props.msgStateInTheStorePassedToProps.message} onChange={(event) => props.setMsgActionPassedToProps(event.target.value)} />
             <input type="submit"/>
             
           </form>
       </div>
     );
   }
-}
 
-export default App;
+
+const mapStateToProps = (state) => {
+  console.log('this is the state', state)
+    return {
+        msgStateInTheStorePassedToProps: state.msgStateInTheStore
+        
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        
+        sendMsgToServerPassedToProps: (msg) => dispatch(sendMsgToServer(msg)),
+        setMsgActionPassedToProps: bindActionCreators(setMsgAction, dispatch),
+        clearMsgActionPassedToProps: bindActionCreators(clearMsgAction, dispatch)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
 
