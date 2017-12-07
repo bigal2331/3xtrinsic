@@ -24,7 +24,7 @@ const App =(props) => {
         
         <header className="App-header">
           
-          <h1 className="App-title">xtrinsic</h1>
+          <h1 className="App-title">3xtrinsic</h1>
           
         </header>
           <div>
