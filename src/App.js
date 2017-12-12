@@ -4,7 +4,6 @@ import sendMsgToServer from './actions/sendMsgAction.js'
 import setMsgAction from './actions/setMsgAction.js'
 import clearMsgAction from './actions/clearMsgAction.js'
 import { bindActionCreators } from 'redux'
-
 import './App.css';
 
 
@@ -19,13 +18,14 @@ const App =(props) => {
     
   }
   
+  
     return (
       <div className="App">
         
         <header className="App-header">
           
           <h1 className="App-title">3xtrinsic</h1>
-          
+           
         </header>
           <div>
             {console.log('this is the conversation in state', props.msgStateInTheStorePassedToProps.conversation)}

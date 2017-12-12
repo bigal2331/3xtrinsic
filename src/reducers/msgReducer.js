@@ -7,6 +7,7 @@ const initialState ={
 }
 
 export default function(state=initialState,action){
+    console.log('this is the action ',action.type)
     switch(action.type) {
         case SET_MSG:
             return {...state,message: action.payload}
