@@ -27,10 +27,10 @@ import { SEND_MSG } from './actionTypes.js';
 //   }
 // }
 
-function sendMsg (translation){
+function sendMsg (translatedMsg){
     return {
         type: SEND_MSG,
-        payload:translation
+        payload:translatedMsg
     }
 }
 

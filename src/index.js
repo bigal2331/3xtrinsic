@@ -10,13 +10,15 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import io from 'socket.io-client';
 
+
 const allReducersCombined = combineReducers({
     msgStateInTheStore: msgReducer,
     userListInTheStore: addUserReducer
     
 });
 
-const socket = io('https://converse-app-jnoriega.c9users.io:8081');              
+const socket = io('https://converse-app-jnoriega.c9users.io:8081');  
+
               
 const store = createStore(allReducersCombined, applyMiddleware(thunk));
 
