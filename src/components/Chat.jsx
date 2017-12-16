@@ -3,10 +3,10 @@ import React from 'react';
 
 const Chat = (props) =>{
     return(
-           <div>
+           <section className="chatWindow">
             {console.log('this is the conversation in state', props.msgSavedInTheStorePassedToProps.conversation)}
-            {props.msgSavedInTheStorePassedToProps.conversation.map((msg,idx) => <div className="translatedMsg" key={idx}>{msg.sender}:{msg.translation}</div> )}
-          </div> 
+            {props.msgSavedInTheStorePassedToProps.conversation.map((msg,idx) => <li className="translatedMsg" key={idx}>{msg.sender}:{msg.translation}</li> )}
+          </section> 
     );
 }
 

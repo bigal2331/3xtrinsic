@@ -10,7 +10,9 @@ import addUserAction from './actions/addUserAction.js'
 import setUserListAction from './actions/setUserList.js'
 import setCurrentUserAction from './actions/setCurrentUser.js'
 import { bindActionCreators } from 'redux'
-import './App.css';
+import './styles/main.css';
+
+// import './App.css';
 
 
 
@@ -54,29 +56,31 @@ class App extends Component {
   
     
     render() {
-      let input;
-      let lang;
+
       
       return (
         <div className="App">
           <header className="App-header">
-            <h1 className="App-title">OneLang</h1>
+            <h1 className="App-title"><span className="oneText">One</span>Lang</h1>
           </header>
-            
+            <div className="newUserFields">
               <input ref={node => {this.input = node}} />
               <input ref={node => {this.lang = node}} />
               <button onClick={()=>this.addUserToChat(this.input.value, this.lang.value)}>
                 Add User
               </button>
-            
+            </div>
               
             <Chat msgSavedInTheStorePassedToProps={this.props.msgSavedInTheStorePassedToProps}/>
             <MessageForm 
+              
               handleSubmit={(event) =>this.handleSubmit(event)} 
               msgSavedInTheStorePassedToProps={this.props.msgSavedInTheStorePassedToProps} 
               setMsgActionPassedToProps={this.props.setMsgActionPassedToProps}
             />
-            <ListOfUsersChatting users={this.props.usersInTheStorePassedToProps}/>
+            <div className="activeUsers">
+              <ListOfUsersChatting users={this.props.usersInTheStorePassedToProps}/>
+            </div>
         </div>
       );
     }
