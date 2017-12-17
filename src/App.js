@@ -18,9 +18,12 @@ import './styles/main.css';
 
 class App extends Component {
 
+  
     //gets the initial list of users and sets the state's active users list
-    componentDidMount() {
+    componentWillMount(){
+        
         this.props.socket.on('share_user_list', (response) =>{
+          console.log('this is the response')
           this.props.setUserListActionPassedToProps(response.users)
         });
     }
@@ -28,8 +31,12 @@ class App extends Component {
 
     //adds current user to the state and transmits it to the server
     addUserToChat(name,language) {
-        let newUser = {id:this.props.usersInTheStorePassedToProps.length , name:name, language:language};
-        this.props.setCurrentUserActionPassedToProps(newUser);
+      
+        const {
+          setCurrentUserActionPassedToProps,
+        } = this.props;
+        let newUser = {id:this.props.usersInTheStorePassedToProps.length , name, language, };
+        setCurrentUserActionPassedToProps(newUser);
         this.props.addUserActionPassedToProps(newUser);
         this.props.socket.emit('new_user_added',{newUser});
     }
@@ -53,7 +60,10 @@ class App extends Component {
         this.props.clearMsgActionPassedToProps();
     }
     
-  
+  showComponents(){
+    let sideBar = document.querySelector('.side-bar')
+    sideBar.classList.toggle('show-side-bar');
+  }
     
     render() {
 
@@ -62,14 +72,21 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title"><span className="oneText">One</span>Lang</h1>
+            <span className="icon" onClick={this.showComponents}>Show Users</span>
           </header>
-            <div className="newUserFields">
-              <input ref={node => {this.input = node}} />
-              <input ref={node => {this.lang = node}} />
-              <button onClick={()=>this.addUserToChat(this.input.value, this.lang.value)}>
-                Add User
-              </button>
+            <div className="side-bar">
+              <div className="newUserFields">
+                <input ref={node => {this.input = node}} />
+                <input ref={node => {this.lang = node}} />
+                <button onClick={()=>this.addUserToChat(this.input.value, this.lang.value)}>
+                  Add User
+                </button>
+              </div>
+              <div className="activeUsers">
+                <ListOfUsersChatting users={this.props.usersInTheStorePassedToProps}/>
+              </div>
             </div>
+              
               
             <Chat msgSavedInTheStorePassedToProps={this.props.msgSavedInTheStorePassedToProps}/>
             <MessageForm 
@@ -78,9 +95,7 @@ class App extends Component {
               msgSavedInTheStorePassedToProps={this.props.msgSavedInTheStorePassedToProps} 
               setMsgActionPassedToProps={this.props.setMsgActionPassedToProps}
             />
-            <div className="activeUsers">
-              <ListOfUsersChatting users={this.props.usersInTheStorePassedToProps}/>
-            </div>
+
         </div>
       );
     }
