@@ -61,8 +61,10 @@ class App extends Component {
     }
     
   showComponents(){
-    let sideBar = document.querySelector('.side-bar')
+    let sideBar = document.querySelector('.side-bar');
+    let header = document.querySelector('.App-header');
     sideBar.classList.toggle('show-side-bar');
+    header.classList.toggle('App-header-shift');
   }
     
     render() {
@@ -72,7 +74,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title"><span className="oneText">One</span>Lang</h1>
-            <span className="icon" onClick={this.showComponents}>Show Users</span>
+            <span className="icon" onClick={this.showComponents}>&#9776;</span>
           </header>
             <div className="side-bar">
               <div className="newUserFields">

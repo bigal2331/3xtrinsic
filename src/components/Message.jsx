@@ -5,7 +5,7 @@ const MessageForm = (props) => {
         <form className="messageForm" onSubmit={props.handleSubmit}>
             <input type="text" name="word" value={props.msgSavedInTheStorePassedToProps.message} 
                 onChange={(event) => props.setMsgActionPassedToProps(event.target.value)} />
-            <input type="submit"/>
+            <input type="submit" className="send-btn" value="Send"/>
         </form>
     );
 }
