@@ -173,7 +173,7 @@ input {
 
 
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 700px) {
   /*.topnav a{display: none;}*/
   /*.topnav a#icon {*/
   /*  float: right;*/
@@ -219,11 +219,21 @@ input {
     
     .messageForm input[type=text] {
         /*background:green;*/
-        width: 55.5rem;
+        width: 75%;
         height: 1.55rem;
     }
     
     .icon {
         display: none;
     }
+}
+
+@media screen and (max-width: 345px) {
+ 
+    .messageForm input[type=text] {
+        /*background:green;*/
+        width: 55%;
+        height: 1.55rem;
+    }
+    
 }
