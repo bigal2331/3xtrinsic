@@ -101,8 +101,8 @@ input {
 }
 
 .send-btn {
-    outline: none;
-    background-image: -webkit-linear-gradient(top, #f26de2, #46e2d8);
+    
+    /*background-image: -webkit-linear-gradient(top, #f26de2, #46e2d8);*/
     text-align: center;
     border-radius: 5px;
     border:none;
@@ -112,8 +112,10 @@ input {
     padding-bottom: .25rem;
     /*height: 1.95rem;*/
     color: #ffffff;
+    outline: none;
     font-size: 20px;
     font-weight: 400;
+    background: #3cb0fd;
 }
 
 .send-btn:hover {
@@ -170,8 +172,30 @@ input {
     font-size: 30px;
     float:right;
 }
+/*input[type="file"] {*/
+/*    display: none;*/
+/*}*/
 
+.file-upload{
+    display: none;
+}
+.upload-btn {
+    border: 1px solid #ccc;
+    color: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    background: #3cb0fd;
+    /*background-image: -webkit-linear-gradient(top, #f26de2, #46e2d8);*/
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0.15em .5em;
+    cursor: pointer;
+}
 
+.picMsg{
+    height: 15em;
+    width: 20em;
+}
 
 @media screen and (min-width: 700px) {
   /*.topnav a{display: none;}*/
@@ -200,12 +224,6 @@ input {
         height: 100%;
         border: 1.2px solid #c3c6cc;
     }
-    .chatWindow {
-        overflow: auto;
-         grid-column: 1 / 6;
-        grid-row: 2 / 3;
-        border: 1.2px solid #c3c6cc;
-    }
     
     .messageForm {
         /*background:green;*/
@@ -220,13 +238,15 @@ input {
     .messageForm input[type=text] {
         /*background:green;*/
         width: 75%;
-        height: 1.55rem;
+
     }
     
     .icon {
         display: none;
     }
 }
+
+
 
 @media screen and (max-width: 345px) {
  
@@ -251,3 +271,4 @@ input {
         font-size: 15px;
     }
 }
+

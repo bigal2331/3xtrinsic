@@ -7,13 +7,13 @@ import { SEND_MSG } from './actionTypes.js';
     
 //   return (dispatch) => {
     
-//       // axios({
-//       //   method:'post',
-//       //   url:'https://converse-app-jnoriega.c9users.io:8081',
-//       //   data: {
-//       //     word: msg
-//       //   }
-//       // })
+    //   axios({
+    //      method:'post',
+    //      url:'https://converse-app-jnoriega.c9users.io:8081',
+    //      data: {
+    //       word: msg
+    //      }
+    //   })
 //       // .then((response) => {
 //       //   let translation = response.data.translation;
 //       //   dispatch(sendMsg(translation));

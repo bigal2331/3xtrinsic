@@ -49,12 +49,17 @@ class App extends Component {
   handleSubmit(event) {
         event.preventDefault();
         this.props.sendMsgActionPassedToProps({
-          sender:"Me",
-          translation:this.props.msgSavedInTheStorePassedToProps.message}
+            sender:"Me",
+            translation:this.props.msgSavedInTheStorePassedToProps.message,
+            isPicMsg: false
+          }
         );
         socket.emit('chat message',
-          {author:this.props.currentUserInTheStorePassedToProps,
-          msg: this.props.msgSavedInTheStorePassedToProps.message}
+          {
+            author:this.props.currentUserInTheStorePassedToProps,
+            msg: this.props.msgSavedInTheStorePassedToProps.message, 
+            isPicMsg: false
+          }
         );
         this.props.clearMsgActionPassedToProps();
     }
@@ -73,6 +78,7 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title"><span className="oneText">One</span>Lang</h1>
+            
             <span className="icon" onClick={this.showComponents}>&#9776;</span>
           </header>
             <div className="side-bar">
@@ -91,12 +97,13 @@ class App extends Component {
               
             <Chat msgSavedInTheStorePassedToProps={this.props.msgSavedInTheStorePassedToProps}/>
             <MessageForm 
-              
+              currentUser={this.props.currentUserInTheStorePassedToProps}
+              socket={socket}
               handleSubmit={(event) =>this.handleSubmit(event)} 
               msgSavedInTheStorePassedToProps={this.props.msgSavedInTheStorePassedToProps} 
               setMsgActionPassedToProps={this.props.setMsgActionPassedToProps}
             />
-
+            
         </div>
       );
     }
