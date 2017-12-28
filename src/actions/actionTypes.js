@@ -6,3 +6,4 @@ export const SET_CURRENT_USER = "SET_CURRENT_USER";
 export const SET_USER_LIST = "SET_USER_LIST";
 export const ADD_USER_FROM_SERVER = "ADD_USER_FROM_SERVER";
 export const REMOVE_USER = "REMOVE_USER";
+export const NEW_USER = "NEW_USER";
