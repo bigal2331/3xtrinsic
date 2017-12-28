@@ -114,7 +114,7 @@ class App extends Component {
       return {
           msgSavedInTheStorePassedToProps: state.msgStateInTheStore,
           usersInTheStorePassedToProps: state.userListInTheStore.users,
-          currentUserInTheStorePassedToProps: state.userListInTheStore.currentUser,
+          currentUserInTheStorePassedToProps: state.currentUser,
       };
   };
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import setToken from '../utils/setAuthToken'
+import PropTypes from 'prop-types';
 
 let LogInForm = props => {
   const { handleSubmit } = props;
@@ -21,6 +23,8 @@ let LogInForm = props => {
         // console.log('this is the response', response.data.token);
         
             localStorage.setItem('ApiToken', response.data.token)
+            setToken(response.data.token);
+            props.history.push("/chat");
         // console.log('this is the local-storage ', localStorage);
       }).catch(function(err){
         console.log('this is the error in axios', err);
@@ -48,6 +52,10 @@ let LogInForm = props => {
   );
   
 };
+
+LogInForm.contextTypes = {
+        router: PropTypes.object.isRequired
+    };
 LogInForm = reduxForm({
   // a unique name for the form
   form: 'login'
