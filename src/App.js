@@ -33,15 +33,15 @@ class App extends Component {
   }
   
     //adds current user to the state and transmits it to the server
-  addUserToChat(name,language) {
+  addUserToChat() {
         const {
-          setCurrentUserActionPassedToProps,
+          currentUserInTheStorePassedToProps,
         } = this.props;
-        let newUser = {id:this.props.usersInTheStorePassedToProps.length , name, language, };
+        // let newUser = {id:this.props.usersInTheStorePassedToProps.length , name, language, };
 
-        setCurrentUserActionPassedToProps(newUser);
-        this.props.addUserActionPassedToProps(newUser);
-        socket.emit('new_user_added',{newUser});
+        // setCurrentUserActionPassedToProps(newUser);
+        this.props.addUserActionPassedToProps(currentUserInTheStorePassedToProps);
+        socket.emit('new_user_added',{newUser:currentUserInTheStorePassedToProps});
   }
 
 
@@ -83,10 +83,9 @@ class App extends Component {
           </header>
             <div className="side-bar">
               <div className="newUserFields">
-                <input ref={node => {this.input = node}} />
-                <input ref={node => {this.lang = node}} />
-                <button onClick={()=>this.addUserToChat(this.input.value, this.lang.value)}>
-                  Add User
+                <input name="addingMore Users" ref={node => {this.input = node}} />
+                <button onClick={()=>this.addUserToChat()}>
+                 Join Chat
                 </button>
               </div>
               <div className="activeUsers">
@@ -114,7 +113,7 @@ class App extends Component {
       return {
           msgSavedInTheStorePassedToProps: state.msgStateInTheStore,
           usersInTheStorePassedToProps: state.userListInTheStore.users,
-          currentUserInTheStorePassedToProps: state.currentUser,
+          currentUserInTheStorePassedToProps: state.currentUser.currentUser,
       };
   };
 

@@ -1,6 +1,8 @@
 import React from 'react';
+import {emojify} from 'react-emojione';
 
 const Chat = (props) =>{
+
     return(
            <section className="chatWindow">
             
@@ -13,7 +15,7 @@ const Chat = (props) =>{
                      <img className="picMsg" src={msg.translation} alt="img sent" />
                     </li>)
                 }else{
-                    return <li className="translatedMsg" key={idx}>{msg.sender}:{msg.translation}</li>
+                    return <li className="translatedMsg" key={idx}>{msg.sender}: {emojify(msg.translation)}</li>
                 }
             })
             }

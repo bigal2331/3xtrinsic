@@ -21,7 +21,7 @@ class ListOfUsersChatting extends Component {
         return(
             <div>
                 <div>
-                    Active Users: {this.props.users.map((user) =>  <div key={user.id}>{user.name}</div>)}
+                    Active Users: {this.props.users.map((user) =>  <div key={user.id}>{user.email}</div>)}
                 </div>
                 <div>
                    <button onClick={(e)=>this.logOut(e)}>Log out</button>

@@ -94,6 +94,4 @@ SignUpForm = reduxForm({
       };
   };
 
-// export default SignUpForm;
-
 export default connect(mapStateToProps, mapDispatchToProps)(SignUpForm);

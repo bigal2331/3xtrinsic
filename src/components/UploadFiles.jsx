@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import setMsgAction from '../actions/setMsgAction.js'
+import { Picker } from 'emoji-mart';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 class UploadFiles extends Component{
     handleUploadFile = (event) => {
@@ -15,46 +18,46 @@ class UploadFiles extends Component{
           {author:this.props.currentUser,
           msg: response.data.url, isPicMsg:true}
         );
-            // console.log(response); // do something with the response
     });
    
     }
-    
-    // constructor(props){
-    //     super(props);
-    //     this.props.socket.on('picMsg', function (picMsg) {
-    //         console.log('this is the file received', picMsg.file)
-    //         var options = {};
-    //         options.file = true;
-            
-    //         //<img class='chat-image' src="${picMsg.file}"> ***this should work
-    //         // msgHandler.processChatMessage(data, options);
-    //     });
-    // }
-    // handleUploadFile = (event) => {
-    //     event.preventDefault();
-    //     const socket = this.props.socket;
-    //     const currentUser = this.props.currentUser;
-    //     const data = event.target.files[0];
-    //     const reader = new FileReader();
-    //     const msg ={};
-    //     reader.onload = function(file){
-            
-    //         msg.author = currentUser;
-    //         msg.file = file.target.result;
-    //         socket.emit('picMsg', msg);
-    //     };
-    //     reader.readAsDataURL(data);
-    // }
+    addEmoji= (emoji,event)=>{
+        const { setMsgActionPassedToProps, msgSavedInTheStorePassedToProps } = this.props;
+        setMsgActionPassedToProps(msgSavedInTheStorePassedToProps.message + emoji.native);
+    }
+ 
     render(){
         
         return(
-             <label className="upload-btn">
-                <input type="file" onChange={this.handleUploadFile} name="upload" className="file-upload"/>
-                +
-            </label>
+            <div>
+                <div>
+                    <Picker className="emojiPicker" skin={4} set='emojione' size={16} onClick={(emoji,event) => this.addEmoji(emoji,event)} />
+                    <span className="showEmojiPicker">🙂</span>
+                </div>
+                 <label className="upload-btn">
+                    <input type="file" onChange={this.handleUploadFile} name="upload" className="file-upload"/>
+                    +
+                </label>
+            </div>
         )
     }
 }
 
-export default UploadFiles;
+
+
+  const mapStateToProps = (state) => {
+    console.log('this is the state.msgStateInTheStore', state.msgStateInTheStore)
+      return {
+          msgSavedInTheStorePassedToProps: state.msgStateInTheStore,
+          
+      };
+  };
+
+  const mapDispatchToProps = (dispatch) => {
+      return {
+          setMsgActionPassedToProps: bindActionCreators(setMsgAction, dispatch),
+          
+      };
+  };
+
+export default connect(mapStateToProps, mapDispatchToProps)(UploadFiles);
