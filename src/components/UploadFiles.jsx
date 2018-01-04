@@ -29,16 +29,16 @@ class UploadFiles extends Component{
     render(){
         
         return(
-            <div>
-                <div>
-                    <Picker className="emojiPicker" skin={4} set='emojione' size={16} onClick={(emoji,event) => this.addEmoji(emoji,event)} />
-                    <span className="showEmojiPicker">🙂</span>
-                </div>
+            <span>
+                    <div className="emojiPicker">
+                        <Picker skin={4} set='emojione' size={16} onClick={(emoji,event) => this.addEmoji(emoji,event)} />
+                    </div>
+                <span className="showEmojiPicker">🙂</span>
                  <label className="upload-btn">
                     <input type="file" onChange={this.handleUploadFile} name="upload" className="file-upload"/>
                     +
                 </label>
-            </div>
+            </span>
         )
     }
 }

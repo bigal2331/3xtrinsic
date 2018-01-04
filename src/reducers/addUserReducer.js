@@ -1,4 +1,4 @@
-import { ADD_USER, ADD_USER_FROM_SERVER, REMOVE_USER, SET_CURRENT_USER, SET_USER_LIST } from '../actions/actionTypes.js';
+import { ADD_USER, ADD_USER_FROM_SERVER, REMOVE_USER, SET_USER_LIST } from '../actions/actionTypes.js';
 
 const initialState ={
     users:[],

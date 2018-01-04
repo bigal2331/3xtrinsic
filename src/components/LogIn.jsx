@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import setCurrentUserAction from '../actions/setCurrentUser.js'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import "../styles/login.css"
 import jwt from 'jsonwebtoken';
 
 class LogInForm extends Component {
@@ -41,21 +42,20 @@ class LogInForm extends Component {
   
   render(){
       return (
-        <div>
+        <div className="logInContainer">
           <form onSubmit={this.props.handleSubmit(values=> this.logIn(values))}>
               <div>
-                <label htmlFor="email">Email</label>
-                <Field name="email" component="input" type="email" />
+                
+                <Field name="email" placeholder="Enter your email" component="input" type="email" />
               </div>
               <div>
-                <label htmlFor="password">Password</label>
-                <Field name="password" component="input" type="password" />
+      
+                <Field name="password" placeholder="Enter your password" component="input" type="password" />
               </div>
               <button type="submit">Submit</button>
-              
           </form>
           <Link to="/signup">
-            <button>Sign Up</button>
+            <button className="singUpBtn">Sign Up</button>
           </Link>
         </div>
       ); 

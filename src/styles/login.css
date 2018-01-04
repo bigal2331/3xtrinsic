@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'myPacifico';
+  src: url('./fonts/Pacifico-Regular.ttf')  format('truetype')
+}
+
+
+.logInContainer {
+    text-align:center;
+}
+
+button {
+     
+    /*background-image: -webkit-linear-gradient(top, #f26de2, #46e2d8);*/
+    text-align: center;
+    border-radius: 5px;
+    border:none;
+    margin-top: .5rem;
+    /*padding: .25rem .5rem;*/
+    padding-top: .025rem;
+    padding-bottom: .25rem;
+    /*height: 1.95rem;*/
+    color: #ffffff;
+    outline: none;
+    font-size: 15px;
+    font-weight: 400;
+    background: #3cb0fd;
+}
+
+.singUpBtn {
+    padding-top: .015rem;
+    padding-bottom: .15rem;
+}
+
+
+input {
+    width: 15rem;
+    height: 1.35rem;
+    border-radius: 5px;
+    border: 1.2px solid #c3c6cc;
+    outline: none;
+    padding: 1px 10px;
+}
+
+.singUpContainer {
+     text-align:center;
+}

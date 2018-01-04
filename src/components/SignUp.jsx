@@ -44,27 +44,22 @@ class SignUpForm extends Component {
   render(){
  
     return (
-        <div>
+        <div className="singUpContainer">
             <form onSubmit={this.props.handleSubmit(values=>this.singUp(values))}>
               <div>
-                  <label htmlFor="firstName">First Name</label>
-                  <Field name="firstName" component="input" type="text" />
+                  <Field name="firstName" placeholder="First Name"component="input" type="text" />
                 </div>
                 <div>
-                  <label htmlFor="lastName">Last Name</label>
-                  <Field name="lastName" component="input" type="text" />
+                  <Field name="lastName" placeholder="Last Name" component="input" type="text" />
                 </div>
                 <div>
-                  <label htmlFor="email">Email</label>
-                  <Field name="email" component="input" type="email" />
+                  <Field name="email" placeholder="Email" component="input" type="email" />
                 </div>
                 <div>
-                  <label htmlFor="password">Password</label>
-                  <Field name="password" component="input" type="password" />
+                  <Field name="password" placeholder="Password" component="input" type="password" />
                 </div>
                 <div>
-                  <label htmlFor="primaryLang">Primary Language</label>
-                  <Field name="primaryLang" component="input" type="text" />
+                  <Field name="primaryLang" placeholder="Primary Language" component="input" type="text" />
                 </div>
                 <button type="submit">Submit</button>
             </form>

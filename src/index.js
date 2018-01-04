@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import msgReducer from './reducers/msgReducer.js';
 import addUserReducer from './reducers/addUserReducer.js';
@@ -10,7 +10,6 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { reducer as formReducer } from 'redux-form';
-import Routes from './routes.jsx';
 import setToken from './utils/setAuthToken';
 import setCurrentUser from './actions/setCurrentUser';
 import jwt from 'jsonwebtoken';
@@ -32,10 +31,9 @@ if (localStorage.ApiToken){
     store.dispatch(setCurrentUser(jwt.decode(localStorage.ApiToken)));
 }
 
-
 ReactDOM.render(
     <Provider store={store}>
-        <Routes/>
+        <App />
     </Provider>, 
     document.getElementById('root'));
 registerServiceWorker();
