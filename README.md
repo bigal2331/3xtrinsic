@@ -1,4 +1,4 @@
-# 3xtrinsic
+# OneLang
 
 A multi-language chat application that lets users communicate with others around the world in their own language.
 
