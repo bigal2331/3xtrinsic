@@ -10,6 +10,7 @@
     "emoji-mart": "^2.4.0",
     "emoji-mart-lite": "^0.4.10",
     "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
