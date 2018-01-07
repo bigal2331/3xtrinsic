@@ -8,6 +8,7 @@
     "delivery": "0.0.6",
     "emoji-js": "^3.4.0",
     "emoji-mart": "^2.4.0",
+    "emoji-mart-lite": "^0.4.10",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

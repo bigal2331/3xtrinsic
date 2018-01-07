@@ -1,15 +1,16 @@
 import React,{ Component } from 'react';
 import { connect } from 'react-redux';
-import Chat from './Chat.jsx'
-import MessageForm from './Message.jsx'
-import ListOfUsersChatting from './ListOfUsersChatting.jsx'
-import sendMsgAction from '../actions/sendMsgAction.js'
-import setMsgAction from '../actions/setMsgAction.js'
-import clearMsgAction from '../actions/clearMsgAction.js'
-import addUserAction from '../actions/addUserAction.js'
-import setUserListAction from '../actions/setUserList.js'
-import setCurrentUserAction from '../actions/setCurrentUser.js'
-import { bindActionCreators } from 'redux'
+import Chat from './Chat.jsx';
+import MessageForm from './Message.jsx';
+import { Picker } from 'emoji-mart';
+import ListOfUsersChatting from './ListOfUsersChatting.jsx';
+import sendMsgAction from '../actions/sendMsgAction.js';
+import setMsgAction from '../actions/setMsgAction.js';
+import clearMsgAction from '../actions/clearMsgAction.js';
+import addUserAction from '../actions/addUserAction.js';
+import setUserListAction from '../actions/setUserList.js';
+import setCurrentUserAction from '../actions/setCurrentUser.js';
+import { bindActionCreators } from 'redux';
 import '../styles/main.css';
 import io from 'socket.io-client';
 
@@ -17,7 +18,6 @@ import io from 'socket.io-client';
 const socket = io('https://converse-app-jnoriega.c9users.io:8081');
 
 class Index extends Component {
-
   handleNewMsg(msg){
       this.props.sendMsgActionPassedToProps(msg);
   }
@@ -59,7 +59,15 @@ class Index extends Component {
           }
         );
         this.props.clearMsgActionPassedToProps();
+        document.querySelector('.unHideEmojiMart').className ='emojiPicker'
     }
+    
+     addEmoji= (emoji,event)=>{
+        const { setMsgActionPassedToProps, msgSavedInTheStorePassedToProps } = this.props;
+        setMsgActionPassedToProps(msgSavedInTheStorePassedToProps.message + emoji.native);
+    }
+    
+
     
     render() {
 
@@ -79,6 +87,9 @@ class Index extends Component {
               
               
             <Chat msgSavedInTheStorePassedToProps={this.props.msgSavedInTheStorePassedToProps}/>
+            <div className="emojiPicker">
+                        <Picker className="emojiPicker" skin={4} set='emojione' size={16} onClick={(emoji,event) => this.addEmoji(emoji,event)} />
+            </div>
             <MessageForm 
               currentUser={this.props.currentUserInTheStorePassedToProps}
               socket={socket}

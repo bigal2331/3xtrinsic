@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import setMsgAction from '../actions/setMsgAction.js'
-import { Picker } from 'emoji-mart';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 class UploadFiles extends Component{
+
+    
     handleUploadFile = (event) => {
     const data = new FormData();
     data.append('file', event.target.files[0]);
@@ -21,19 +22,19 @@ class UploadFiles extends Component{
     });
    
     }
-    addEmoji= (emoji,event)=>{
-        const { setMsgActionPassedToProps, msgSavedInTheStorePassedToProps } = this.props;
-        setMsgActionPassedToProps(msgSavedInTheStorePassedToProps.message + emoji.native);
+   
+    pickEmoji = (event) => {
+        const emojiPicker = document.querySelector('.emojiPicker');
+        
+            emojiPicker.classList.toggle('unHideEmojiMart')
     }
  
     render(){
         
         return(
             <span>
-                    <div className="emojiPicker">
-                        <Picker skin={4} set='emojione' size={16} onClick={(emoji,event) => this.addEmoji(emoji,event)} />
-                    </div>
-                <span className="showEmojiPicker">🙂</span>
+                    
+                <span className="showEmojiPicker" onClick={event => this.pickEmoji(event)}>🙂</span>
                  <label className="upload-btn">
                     <input type="file" onChange={this.handleUploadFile} name="upload" className="file-upload"/>
                     +
