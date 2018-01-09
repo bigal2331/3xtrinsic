@@ -1,7 +1,7 @@
-><p style="text-align: center;">
->	   <img src="/public/frenchChat.JPG" align="top" width="350px" height="350px"/>
- >   <img src="/public/frenchChatResult.JPG" align="top" width="350px" height="350px"/>
-></p>
+<p style="text-align: center;">
+	   <img src="/public/frenchChat.JPG" align="top" width="500px" height="350px"/>
+    <img src="/public/frenchChatResult.JPG" align="top" width="500px" height="350px"/>
+</p>
 
 
 # OneLang
