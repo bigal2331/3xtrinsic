@@ -14,7 +14,7 @@ class SignUpForm extends Component {
   singUp(formValues){
     //form values:
     // {firstName: "jeiner", lastName: "noriega", email: "Noriegaj@lighthouseguild.org", password: "123", primaryLang: "spanish"}
-    const c9Url = 'https://converse-app-jnoriega.c9users.io:8081/signup'
+    // const c9Url = 'https://converse-app-jnoriega.c9users.io:8081/signup'
     const herokuUrl = 'https://api-onelang.herokuapp.com/signup'
       axios({
       method:'post',

@@ -15,7 +15,7 @@ import '../styles/main.css';
 import io from 'socket.io-client';
 
 
-const c9Url= 'https://converse-app-jnoriega.c9users.io:8081';
+// const c9Url= 'https://converse-app-jnoriega.c9users.io:8081';
 const herokuUrl = 'https://api-onelang.herokuapp.com/';
 const socket = io(herokuUrl);
 // const socket = io('https://git.heroku.com/api-onelang.git');

@@ -175,18 +175,23 @@ input[type="file"] {
     background: #3cb0fd;
     display: inline-block;
     margin-left: 5px;
-    padding: 0.15em .5em;
+    margin-top: 5px;
+    padding: 0.25em .65em;
     cursor: pointer;
 }
 .showEmojiPicker {
-    font-size: 12px;
+    font-size: 20px;
+    font-weight: 700;
     border: 1px solid #ccc;
     color: #ffffff;
     border-radius: 5px;
     outline: none;
     background: #3cb0fd;
     display: inline-block;
-    padding: 0.25em .30em;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    /*margin: 0.25em .30em;*/
     cursor: pointer;
 }
 
@@ -205,7 +210,9 @@ input[type="file"] {
     grid-row: 2 / 3;
     z-index: 5;
 }
-
+button {
+    cursor: pointer;
+}
 .emojiPicker::-webkit-scrollbar {
     width: 2px;
 }
@@ -286,10 +293,7 @@ input[type="file"] {
         display: none;
     }
     
-    .showEmojiPicker {
-        font-size: 13px;
-        
-    }
+
     .emoji-mart {
         margin: 20px auto;
     }
@@ -303,9 +307,13 @@ input[type="file"] {
         width: 5rem;
         font-weight: 400;
     }
+    .showEmojiPicker {
+        font-size: 20px;
+        padding-bottom: 3px;
+    }
     .upload-btn {
-        
-        padding: 0.2em .52em;
+        margin-top: 3px;
+        padding: 0.23em .65em;
     }
 }
 
