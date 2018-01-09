@@ -60,7 +60,7 @@ npm start
   
 &nbsp;
 &nbsp;
-## 
+
 
 * React 
 * Redux 
