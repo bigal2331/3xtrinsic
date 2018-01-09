@@ -56,7 +56,7 @@ npm start
     <img src="https://www.shareicon.net/data/512x512/2016/07/08/117367_logo_512x512.png" width="50px" height="50px"/>
     <img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" width="50px" height="50px"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" width="50px" height="50px"/>
-    <img src="https://blog.tuleap.org/sites/default/files/socket-logo.png" width="50px" height="50px"/>
+    <img src="http://www.programwitherik.com/content/images/2017/01/socket-e1434850599985.png" width="50px" height="50px"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/CSS3_and_HTML5_logos_and_wordmarks.svg/2000px-CSS3_and_HTML5_logos_and_wordmarks.svg.png" width="50px" height="50px"/>
     
   </p>
