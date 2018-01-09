@@ -1,10 +1,10 @@
-<p style="text-align: center;">
-	   <img src="/public/frenchChat.JPG" align="right" width="350px" height="350px"/>
-    <img src="/public/frenchChatResult.JPG" align="right" width="350px" height="350px"/>
-</p>
+><p style="text-align: center;">
+>	   <img src="/public/frenchChat.JPG" align="right" width="350px" height="350px"/>
+ >   <img src="/public/frenchChatResult.JPG" align="right" width="350px" height="350px"/>
+></p>
 
 
-># OneLang
+# OneLang
 
 A multi-language chat application that lets users communicate with others around the world in their own language.
 
