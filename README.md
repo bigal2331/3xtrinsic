@@ -51,10 +51,10 @@ npm start
 | `primary language`    | Password created to sign into acount.                                                       |
 
 ## Built With
-<img src="https://www.shareicon.net/data/512x512/2016/07/08/117367_logo_512x512.png" align="right" width="100px" height="100px"/>
-<img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" align="right" width="100px" height="100px"/>
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" align="right" width="100px" height="100px"/>
-<img src="https://blog.tuleap.org/sites/default/files/socket-logo.png" align="right" width="100px" height="100px"/>
+<img src="https://www.shareicon.net/data/512x512/2016/07/08/117367_logo_512x512.png" align="left" width="100px" height="100px"/>
+<img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" align="left" width="100px" height="100px"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" align="left" width="100px" height="100px"/>
+<img src="https://blog.tuleap.org/sites/default/files/socket-logo.png" align="left" width="100px" height="100px"/>
 
 
 * React 
