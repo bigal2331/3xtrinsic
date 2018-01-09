@@ -1,6 +1,8 @@
 
-<img src="/public/frenchChatResult.JPG" align="right" />
+# French to English Sample Chat
 <img src="/public/frenchChat.JPG" align="right" />
+<img src="/public/frenchChatResult.JPG" align="right" />
+
 
 # OneLang
 
