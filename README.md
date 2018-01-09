@@ -1,10 +1,10 @@
 
 # French to English Sample Chat
-![](./public/frenchChat.JPG" align="right)
+
 <img src="/public/frenchChat.JPG" align="right" />
 <img src="/public/frenchChatResult.JPG" align="right" />
-
-
+##
+##
 # OneLang
 
 A multi-language chat application that lets users communicate with others around the world in their own language.
