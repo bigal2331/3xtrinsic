@@ -9,10 +9,12 @@ class UploadFiles extends Component{
     
     handleUploadFile = (event) => {
     const data = new FormData();
+    const c9Url = 'https://converse-app-jnoriega.c9users.io:8081/files'
+    const herokuUrl = 'https://api-onelang.herokuapp.com/files'
     data.append('file', event.target.files[0]);
     axios({
          method:'post',
-         url:'https://converse-app-jnoriega.c9users.io:8081/files',
+         url:herokuUrl,
          data
       }).then((response) => {
           this.props.socket.emit('chat message',
