@@ -57,9 +57,6 @@ npm start
     <img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" align="left" width="80px" height="100px"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" align="left" width="80px" height="100px"/>
     <img src="https://blog.tuleap.org/sites/default/files/socket-logo.png" align="left" width="80px" height="100px"/>
-  
-&nbsp;
-&nbsp;
 
 
 * React 
