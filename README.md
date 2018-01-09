@@ -1,6 +1,4 @@
 
-	<img src="/public/frenchChat.JPG" />
-	<img src="/public/frenchChatResult.JPG" />
 <img src="/public/frenchChatResult.JPG" align="right" />
 <img src="/public/frenchChat.JPG" align="right" />
 
