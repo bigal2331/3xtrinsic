@@ -14,31 +14,33 @@ class SignUpForm extends Component {
   singUp(formValues){
     //form values:
     // {firstName: "jeiner", lastName: "noriega", email: "Noriegaj@lighthouseguild.org", password: "123", primaryLang: "spanish"}
-       axios({
-         method:'post',
-         url:'https://converse-app-jnoriega.c9users.io:8081/signup',
-         data: {
-          email:formValues.email,
-          password:formValues.password,
-          firstName: formValues.firstName,
-          lastName: formValues.lastName,
-          language: formValues.primaryLang
-         }
-      }).then((response) => {
-        // console.log('this is the response', response);
-        // console.log('this is the response', response.data.token);
-        // jwt.decode(response.data.token) = {id: 1, email: "Noriegaj@lighthouseguild.org", language: "spanish", iat: 1514474307, exp: 1514474607}
-         const {
-          setCurrentUserActionPassedToProps,
-        } = this.props;
-            localStorage.setItem('ApiToken', response.data.token)
-            setToken(response.data.token);
-            setCurrentUserActionPassedToProps(jwt.decode(response.data.token));
+    const c9Url = 'https://converse-app-jnoriega.c9users.io:8081/signup'
+    const herokuUrl = 'https://api-onelang.herokuapp.com/signup'
+      axios({
+      method:'post',
+      url:herokuUrl,
+      data:{
+        email:formValues.email,
+        password:formValues.password,
+        firstName: formValues.firstName,
+        lastName: formValues.lastName,
+        language: formValues.primaryLang
+      }
+    }).then((response) => {
+      // console.log('this is the response', response);
+      // console.log('this is the response', response.data.token);
+      // jwt.decode(response.data.token) = {id: 1, email: "Noriegaj@lighthouseguild.org", language: "spanish", iat: 1514474307, exp: 1514474607}
+      const {
+        setCurrentUserActionPassedToProps,
+      } = this.props;
+          localStorage.setItem('ApiToken', response.data.token)
+          setToken(response.data.token);
+          setCurrentUserActionPassedToProps(jwt.decode(response.data.token));
 
-      }).catch(function(err){
-        console.log('this is the error in axios', err);
-      });
-    
+    }).catch(function(err){
+      console.log('this is the error in axios', err);
+    });
+   
   }
   
   render(){

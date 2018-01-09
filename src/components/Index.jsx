@@ -14,8 +14,8 @@ import { bindActionCreators } from 'redux';
 import '../styles/main.css';
 import io from 'socket.io-client';
 
-
 const socket = io('https://converse-app-jnoriega.c9users.io:8081');
+// const socket = io('https://git.heroku.com/api-onelang.git');
 
 class Index extends Component {
   handleNewMsg(msg){
@@ -59,7 +59,10 @@ class Index extends Component {
           }
         );
         this.props.clearMsgActionPassedToProps();
-        document.querySelector('.unHideEmojiMart').className ='emojiPicker'
+        if(document.querySelector('.unHideEmojiMart') !== null){
+           document.querySelector('.unHideEmojiMart').className ='emojiPicker'
+        }
+       
     }
     
      addEmoji= (emoji,event)=>{
