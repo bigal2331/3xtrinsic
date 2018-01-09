@@ -1,5 +1,5 @@
 # OneLang
-<img src="/public/frenchChat.JPG" align="right" />
+<img src="/public/frenchChat.JPG" align="right" width="200px" height="200px"/>
 A multi-language chat application that lets users communicate with others around the world in their own language.
 
 ### Installing
