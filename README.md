@@ -1,7 +1,7 @@
-<p style="text-align: center;">
-	![](./public/frenchChat.JPG =250x)
-	![](./public/frenchChatResult.JPG =250x)
-</p>
+
+	<img src="/public/frenchChat.JPG" />
+	<img src="/public/frenchChatResult.JPG" />
+
 
 
 # OneLang
