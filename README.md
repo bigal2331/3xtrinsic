@@ -4,8 +4,7 @@
 <img src="/public/frenchChat.JPG" align="right" />
 <img src="/public/frenchChatResult.JPG" align="right" />
 
-##
-##
+<br><br>
 
 # OneLang
 
