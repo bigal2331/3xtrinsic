@@ -1,5 +1,6 @@
 
 # French to English Sample Chat
+![](/public/frenchChat.JPG" align="right)
 <img src="/public/frenchChat.JPG" align="right" />
 <img src="/public/frenchChatResult.JPG" align="right" />
 
