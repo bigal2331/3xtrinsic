@@ -36,7 +36,7 @@ class UploadFiles extends Component{
         return(
             <span>
                     
-                <span className="showEmojiPicker" onClick={event => this.pickEmoji(event)}>🙂</span>
+                <span className="showEmojiPicker" onClick={event => this.pickEmoji(event)}>&#x263A;</span>
                  <label className="upload-btn">
                     <input type="file" onChange={this.handleUploadFile} name="upload" className="file-upload"/>
                     +
