@@ -1,6 +1,6 @@
 <p style="text-align: center;">
-	   <img src="/public/frenchChat.JPG" align="top" width="500px" height="350px"/>
-    <img src="/public/frenchChatResult.JPG" align="top" width="500px" height="350px"/>
+	<img src="/public/frenchChat.JPG" align="top" width="700px" height="350px"/>
+	<img src="/public/frenchChatResult.JPG" align="top" width="700px" height="350px"/>
 </p>
 
 
