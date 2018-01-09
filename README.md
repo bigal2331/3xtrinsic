@@ -52,7 +52,7 @@ npm start
 
 ## Built With
 
-* React
+* React <img src="https://www.shareicon.net/data/512x512/2016/07/08/117367_logo_512x512.png" />
 * Redux
 * ExpressJS
 * Socket.io
