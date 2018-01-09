@@ -3,9 +3,10 @@
 A multi-language chat application that lets users communicate with others around the world in their own language.
 
 # Sample Chat
-<img src="/public/frenchChat.JPG" align="left" width="500px" height="500px"/>
-<img src="/public/frenchChatResult.JPG" align="right" width="500px" height="500px"/>
-### Installing
+<img src="/public/frenchChat.JPG" align="left" width="350px" height="350px"/>
+<img src="/public/frenchChatResult.JPG" align="right" width="350px" height="350px"/>
+# Installing
+
 
 ```
 git clone https://github.com/bigal2331/3xtrinsic.git
