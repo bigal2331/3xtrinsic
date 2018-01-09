@@ -1,6 +1,6 @@
 <p style="text-align: center;">
-	<img src="/public/frenchChat.JPG" align="top" />
-	<img src="/public/frenchChatResult.JPG" align="top"/>
+	![](./public/frenchChat.JPG =250x)
+	![](./public/frenchChatResult.JPG =250x)
 </p>
 
 
