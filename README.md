@@ -57,10 +57,11 @@ npm start
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png" align="left" width="80px" height="100px"/>
     <img src="https://blog.tuleap.org/sites/default/files/socket-logo.png" align="left" width="80px" height="100px"/>
   </p>
+## 
 &nbsp;
-* React &nbsp;
-* Redux &nbsp;
-* ExpressJS &nbsp;
-* Socket.io &nbsp;
-* CSS3 &nbsp;
-* HTML5 &nbsp;
+* React 
+* Redux 
+* ExpressJS 
+* Socket.io 
+* CSS3
+* HTML5
