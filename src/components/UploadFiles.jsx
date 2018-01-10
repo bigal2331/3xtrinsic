@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import setMsgAction from '../actions/setMsgAction.js'
+import sendMsgAction from '../actions/sendMsgAction.js';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
@@ -8,20 +8,31 @@ class UploadFiles extends Component{
 
     
     handleUploadFile = (event) => {
-    const data = new FormData();
-    // const c9Url = 'https://converse-app-jnoriega.c9users.io:8081/files'
-    const herokuUrl = 'https://api-onelang.herokuapp.com/files'
-    data.append('file', event.target.files[0]);
-    axios({
-         method:'post',
-         url:herokuUrl,
-         data
-      }).then((response) => {
-          this.props.socket.emit('chat message',
-          {author:this.props.currentUser,
-          msg: response.data.url, isPicMsg:true}
-        );
-    });
+        const data = new FormData();
+        // const c9Url = 'https://converse-app-jnoriega.c9users.io:8081/files'
+        const herokuUrl = 'https://api-onelang.herokuapp.com/files'
+        data.append('file', event.target.files[0]);
+        axios({
+             method:'post',
+             url:herokuUrl,
+            //  url:c9Url,
+             data
+          }).then((response) => {
+            
+            this.props.sendMsgActionPassedToProps({
+                sender:"Me",
+                translation:response.data.url,
+                isPicMsg: true
+              }
+            );
+            
+            
+            this.props.socket.emit('chat message',
+                  {author:this.props.currentUser,
+                  msg: response.data.url, isPicMsg:true}
+            );
+            
+        });
    
     }
    
@@ -48,19 +59,11 @@ class UploadFiles extends Component{
 
 
 
-  const mapStateToProps = (state) => {
-    console.log('this is the state.msgStateInTheStore', state.msgStateInTheStore)
-      return {
-          msgSavedInTheStorePassedToProps: state.msgStateInTheStore,
-          
-      };
-  };
 
   const mapDispatchToProps = (dispatch) => {
       return {
-          setMsgActionPassedToProps: bindActionCreators(setMsgAction, dispatch),
-          
+          sendMsgActionPassedToProps: bindActionCreators(sendMsgAction, dispatch),
       };
   };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UploadFiles);
+export default connect(null, mapDispatchToProps)(UploadFiles);

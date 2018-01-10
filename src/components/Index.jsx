@@ -21,6 +21,7 @@ const socket = io(herokuUrl);
 // const socket = io('https://git.heroku.com/api-onelang.git');
 
 class Index extends Component {
+  
   handleNewMsg(msg){
       this.props.sendMsgActionPassedToProps(msg);
   }
