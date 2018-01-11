@@ -36,7 +36,7 @@ class SignUpForm extends Component {
           localStorage.setItem('ApiToken', response.data.token)
           setToken(response.data.token);
           setCurrentUserActionPassedToProps(jwt.decode(response.data.token));
-
+          this.props.history.push("/chat");
     }).catch(function(err){
       console.log('this is the error in axios', err);
     });
