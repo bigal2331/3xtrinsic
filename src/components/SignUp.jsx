@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form'
 import {Link} from "react-router-dom";
 import axios from 'axios';
-import setToken from '../utils/setAuthToken'
+import setToken from '../utils/setAuthToken';
+import PropTypes from 'prop-types';
 import setCurrentUserAction from '../actions/setCurrentUser.js'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -72,6 +73,10 @@ class SignUpForm extends Component {
     );
   }
 }
+
+SignUpForm.contextTypes = {
+        router: PropTypes.object.isRequired
+    };
 
 SignUpForm = reduxForm({
   // a unique name for the form
