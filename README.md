@@ -4,6 +4,10 @@
   <img src="/public/French.PNG" align="right" />
   <img src="/public/English.PNG" align="right" />
 </p>
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](/public/French.PNG)  |  ![](/public/English.PNG)
+
 # OneLang
 
 A multi-language chat application that lets users communicate with others around the world in their own language.
