@@ -1,8 +1,8 @@
 
 # French to English Sample Chat
-
-<img src="/public/English.PNG" align="left" />
 <img src="/public/French.PNG" align="left" />
+<img src="/public/English.PNG" align="left" />
+
 &nbsp;
 &nbsp;
 
