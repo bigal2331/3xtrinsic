@@ -1,12 +1,10 @@
 
 # French to English Sample Chat
-<p>
-  <img src="/public/French.PNG" align="right" />
-  <img src="/public/English.PNG" align="right" />
-</p>
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](/public/French.PNG)  |  ![](/public/English.PNG)
+
+  <img src="/public/French.PNG" align="left" />
+  <img src="/public/English.PNG" align="center" />
+
+
 
 # OneLang
 
