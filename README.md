@@ -1,7 +1,7 @@
 
 # French to English Sample Chat
 <p>
-  <img src="/public/French.PNG" align="left" height:"350px"/>
+  <img src="/public/French.PNG" align="left" height:"250px"/>
   <img src="/public/English.PNG" align="left" height:"350px"/>
 </p>
 # OneLang
