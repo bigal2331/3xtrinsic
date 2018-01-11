@@ -1,12 +1,8 @@
 
 # French to English Sample Chat
-<img src="/public/French.PNG" align="left" />
+<img src="/public/French.PNG" align="left" height:"350px"/>
 <img src="/public/English.PNG" align="left" height:"350px"/>
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
 # OneLang
 
 A multi-language chat application that lets users communicate with others around the world in their own language.
