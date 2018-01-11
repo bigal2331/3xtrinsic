@@ -2,7 +2,7 @@
 # French to English Sample Chat
   
   <img src="/public/French.PNG" align="left" />
-  <img src="/public/English.PNG" align="right" />
+  <img src="/public/English.PNG" align="center" />
 
 
 
