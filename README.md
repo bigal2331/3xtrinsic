@@ -63,9 +63,10 @@ npm start
     
   </p>
 
-* React 
-* Redux 
-* ExpressJS 
-* Socket.io 
-* CSS3
-* HTML5
+* React - Leveraged to create a fast user interface
+* Redux - Provided a solution to the application state management
+* Express - Used to create the application api
+* Socket.io - For real-time user communication
+* JSON Web Token - Facilitated secure data transmission with JSON Web Token
+* CSS3 - For styling and UI responsiveness
+* HTML5 - For site structure
