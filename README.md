@@ -3,6 +3,7 @@
 Communication amongst individuals that speak the same language can sometimes lead to mix ups and mis-interpretations; add a language barrier and you have a recipe for disaster. OneLang addresses this problem, by seamlessly translating messages, transmitted in another language, to the readers primary language. OneLang makes it possible for individuals that speak different languages to communicate in real-time and share ideas. Try OneLang <a href="onelang.herokuapp.com">OneLang</a>
 
 # French to English Sample Chat
+In this example, a French speaker reaches out to his English speaking friend to see how he's doing. The English speaker receives his friend's message in English and is able to reply in English. The French speaker receives the message in French.
   
   <img src="/public/French.PNG" align="left" />
   <img src="/public/English.PNG" align="center" />
@@ -13,7 +14,11 @@ Communication amongst individuals that speak the same language can sometimes lea
 
 
 ```
+### Clone the repository
 git clone https://github.com/bigal2331/3xtrinsic.git
+### Install all the dependencies
+git install
+### run the application - got to https://localhost:8080 in your browser
 npm start
 ```
 
