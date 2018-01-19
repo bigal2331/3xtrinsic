@@ -14,11 +14,11 @@ In this example, a French speaker reaches out to his English speaking friend to 
 
 
 ```
-### Clone the repository
+-- Clone the repository
 git clone https://github.com/bigal2331/3xtrinsic.git
-### Install all the dependencies
+-- Install all the dependencies
 git install
-### run the application - got to https://localhost:8080 in your browser
+-- run the application - got to https://localhost:8080 in your browser
 npm start
 ```
 
