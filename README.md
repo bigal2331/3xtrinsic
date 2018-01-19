@@ -1,6 +1,6 @@
 # OneLang
 
-A multi-language chat application that lets users communicate with others around the world in their own language.
+Communication amongst individuals that speak the same language can sometimes lead to mix ups and mis-interpretations; add a language barrier and you have a recipe for disaster. OneLang addresses this problem, by seamlessly translating messages, transmitted in another language, to the readers primary language. OneLang makes it possible for individuals that speak different languages to communicate in real-time and share ideas. Try OneLang <a href="onelang.herokuapp.com">OneLang</a>
 
 # French to English Sample Chat
   
